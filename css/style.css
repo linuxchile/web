@@ -89,6 +89,20 @@ html,
 	   heigh: 400px;
 	 
 	 }
+	 
+	 img { padding: 3px; margin: 0 1em 0 1em; } 
+	 
+	 div.lb img { margin-top: 100px; padding:1px; background: #333; } 
+	 
+	 div.lb { display: none; position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%; text-align: center; background:url(../img/screen.png) repeat; } 
+	 
+	 div.lb:target { display: block; } /** IE no soporta :target, así que usaremos expresiones CSS **/ 
+	 
+	 div.lb { display: expression((document.location.toString().split('#').slice(1) == this. id)?'block':'none'); } 
+	
+	 
+
+
 	
 	#footer {
 	   position:absolute;
